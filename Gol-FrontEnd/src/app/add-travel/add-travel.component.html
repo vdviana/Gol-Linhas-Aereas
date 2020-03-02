@@ -1,0 +1,28 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div class="form-group">
+  <title>Adicionar Nova Viagem</title>
+  <label for="Nome">Nome</label>
+  <input type="text" class="form-control" id="nome" aria-describedby="Nome" placeholder="Enter Travel Name"
+    [(ngModel)]="this.travel.nome">
+  <small id="nomeHelp" class="form-text text-muted">Importante na identificação da viagem.</small>
+</div>
+<div class="form-group">
+  <label for="DataPartida">Data de Partida</label>
+  <input type="datetime" class="form-control" id="DataPartida" [(ngModel)]="travel.dataPartida"
+    placeholder="Data de Partida">
+</div>
+<div class="form-group">
+  <label for="Origem">Origem</label>
+  <input type="text" class="form-control" id="Origem" placeholder="Origem" [(ngModel)]="travel.origem">
+</div>
+<div class="form-group">
+  <label for="Destino">Destino</label>
+  <input type="text" class="form-control" id="Destino" [(ngModel)]="travel.destino" placeholder="Destino">
+</div>
+
+<button type="submit" class="btn btn-primary" (click)="SaveNewTravel()">Salvar</button>
+<button type="submit" class="btn btn-primary" (click)="Cancel()">Cancelar</button>
